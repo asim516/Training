@@ -5,8 +5,7 @@ package training;
 
 public class App {
     public String getGreeting() {
-        init x;
-        return "Hello world.";
+        return "Hello consortium world.";
     }
 
     public static void main(String[] args) {
