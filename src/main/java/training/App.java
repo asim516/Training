@@ -5,6 +5,7 @@ package training;
 
 public class App {
     public String getGreeting() {
+        init x;
         return "Hello world.";
     }
 
