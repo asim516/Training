@@ -1,66 +1,77 @@
-  
-  package playground;
+package playground;
 
-class Shapes
-{
-  public static void main(String arg[])
+import java.util.Scanner;
+
+abstract class calcArea {
+  abstract void findTriangle(double b, double h);
+  abstract void findRectangle(double l, double b);
+  abstract void findSquare(double s);
+  abstract void findCircle(double r);
+}
+
+class findArea extends calcArea {
+
+  void findTriangle(double b, double h)
   {
-    Rectangle r = new Rectangle(10, 4);
-    Square s = new Square(7);
-    Circle c = new Circle(3.5);
+    double area = (b*h)/2;
+    System.out.println("Area of Triangle: "+area);
+  }
 
-    System.out.println("Rectangle Area : " + r.getArea());
-    System.out.println("Square Area : " + s.getArea());
-    System.out.println("Circle Area : " + c.getArea());
-    System.out.println();
+  void findRectangle(double l, double b)
+  {
+    double area = l*b;
+    System.out.println("Area of Rectangle: "+area);
+  }
 
+  void findSquare(double s)
+  {
+    double area = s*s;
+    System.out.println("Area of Square: "+area);
+  }
 
+  void findCircle(double r)
+  {
+    double area = 3.14*r*r;
+    System.out.println("Area of Circle: "+area);
   }
 }
 
-class Rectangle
-{
-  double length;
-  double breadth;
+class area {
+    public static void main(String args[]) {
+        double l, b, h, r, s;
+        findArea area = new findArea();
+        Scanner get = new Scanner(System.in);
+        System.out.println("Enter a shape:1.triangle,2.rectangle,3.square,4.circle:");
 
-  Rectangle(double length, double breadth)
-  {
-    this.length = length;
-    this.breadth = breadth;
-  }
+        Scanner kb = new Scanner(System.in);
+        int choice = kb.nextInt();
+        switch (choice) {
+            case 1:
 
-  double getArea()
-  {
-    return length * breadth;
-  }
-}
+                System.out.print("\nEnter Base & Vertical Height of Triangle: ");
+                b = get.nextDouble();
+                h = get.nextDouble();
+                area.findTriangle(b, h);
+                break;
+            case 2:
 
-class Square
-{
-  double side;
 
-  Square(double side)
-  {
-    this.side = side;
-  }
+                System.out.print("\nEnter Length & Breadth of Rectangle: ");
+                l = get.nextDouble();
+                b = get.nextDouble();
+                area.findRectangle(l, b);
+                break;
+            case 3:
 
-  double getArea()
-  {
-    return side * side;
-  }
-}
-
-class Circle
-{
-  double radius;
-
-  Circle(double radius)
-  {
-    this.radius = radius;
-  }
-
-  double getArea()
-  {
-    return (22.0/7.0) * radius * radius;
-  }
+                System.out.print("\nEnter Side of a Square: ");
+                s = get.nextDouble();
+                area.findSquare(s);
+                break;
+            case 4:
+                System.out.print("\nEnter Radius of Circle: ");
+                r = get.nextDouble();
+                area.findCircle(r);
+                break;
+        }
+    }
 }
