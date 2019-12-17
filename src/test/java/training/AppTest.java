@@ -1,15 +1,15 @@
-package playground;
+package Training;
 
 import java.util.Scanner;
 
-abstract class calcArea {
+abstract class AppTest {
   abstract void findTriangle(double b, double h);
   abstract void findRectangle(double l, double b);
   abstract void findSquare(double s);
   abstract void findCircle(double r);
 }
 
-class findArea extends calcArea {
+class findArea extends AppTest {
 
   void findTriangle(double b, double h)
   {
