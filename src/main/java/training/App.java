@@ -4,6 +4,9 @@
  */
 package training;
 
+
+import java.util.Arrays;
+
 public class App {
     public String getGreeting() {
         return "Hello consortium world.";
@@ -12,6 +15,6 @@ public class App {
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
         System.out.println(new Area().getAreaforAllShapes());
-        System.out.print(new Employees().obj.toJSONString());
+        System.out.println((Arrays.toString(new Employees().getTheName())));
     }
 }

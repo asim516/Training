@@ -1,37 +1,35 @@
 package training;
 
-import java.io.FileWriter;
-import java.io.IOException;
+import com.fasterxml.jackson.annotation.JsonGetter;
 
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
+import java.util.Arrays;
+import java.util.List;
 
 public class Employees {
 
     @SuppressWarnings("unchecked")
 
-    JSONObject obj = new JSONObject();
 
-    {
+    public String[] name = new String[]{"asim","mahida","anam","ahmed"};
+
+    public String[] Employees( String[] empname) {
+        String[] str= new String[4];
 
 
-        JSONArray employee = new JSONArray();
-        employee.add("Asim");
-        employee.add("Bilal");
-        employee.add("Azeem");
+        str[0]=name[0];
+        str[1]=name[1];
+        str[2]=name[2];
+        str[3]=name[3];
+        return str;
+    }
 
-        obj.put("employee-name", employee);
+    @JsonGetter("name")
+    public String[] getTheName() {
 
-        try {
+        return this.name;
 
-            FileWriter file = new FileWriter("data.json");
-            file.write(obj.toJSONString());
-            file.flush();
-            file.close();
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
 
 
     }
