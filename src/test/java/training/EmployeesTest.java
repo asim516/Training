@@ -1,7 +1,6 @@
 package training;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -13,15 +12,10 @@ import static org.junit.Assert.*;
 public class EmployeesTest {
 
     @Test
-    public void testEmployees() throws JsonProcessingException {
+    public void testEmployees() {
 
-         String[] emp =new String[]{"asim","mahida","anam","ahmed"};
+        Employees emp = new Employees();
 
-        String result = new ObjectMapper().writeValueAsString(emp);
-        assertEquals(Arrays.toString(emp),(Arrays.toString(new Employees().getTheName())));
-
-
+        assertNotNull("app should have a greeting", emp.obj.toJSONString());
     }
-
-
 }
