@@ -15,6 +15,6 @@ public class App {
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
         System.out.println(new Area().getAreaforAllShapes());
-        System.out.println((Arrays.toString(new Employees().getTheName())));
+        System.out.print(new Employees().obj.toJSONString());
     }
 }
