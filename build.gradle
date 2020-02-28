@@ -44,8 +44,8 @@ dependencies {
  }
 
 dependencies {
-  implementation platform('software.amazon.awssdk:bom:2.5.29')
-  implementation 'software.amazon.awssdk:kinesis'
+  implementation 'com.amazonaws:aws-java-sdk-dynamodb:1.11.732;
+  implementation 'com.amazonsaws:aws-java-sdk-core:1.11.732'
   testImplementation group: 'junit', name: 'junit', version: '4.11'
 
  }
