@@ -11,8 +11,16 @@ public class App {
     public String getGreeting() {
         return "Hello consortium world.";
     }
+  
 
-    public static void main(String[] args) {
+    public static void main(String[] args)throws InterruptedException {
+      
+      
+        CreateTable cred = new CreateTable();
+        String a = cred.CreateTable();
+
+        System.out.println(a);
+      
         System.out.println(new App().getGreeting());
         System.out.println(new Area().getAreaforAllShapes());
         System.out.print(new Employees().obj.toJSONString());
