@@ -32,8 +32,6 @@ public class CreateTable {
         BasicAWSCredentials awsCreds = new BasicAWSCredentials(AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY);
 
 
-        client = AmazonDynamoDBClientBuilder.standard().withCredentials(
-                new AWSStaticCredentialsProvider(awsCreds)).withRegion("us-west-2").build();
 
         DynamoDB dynamoDB = new DynamoDB(client);
         client = AmazonDynamoDBClient.builder().withCredentials(new AWSStaticCredentialsProvider(awsCreds)).withRegion(Regions.EU_WEST_2).build();
