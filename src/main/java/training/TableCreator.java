@@ -44,9 +44,6 @@ public class TableCreator {
             System.out.println("Unable to create table: ");
             System.err.println(e.getMessage());
         }
-        System.out.println("Reached create table");
-        System.out.println( accessId );
-        System.out.println( accessSecret);
-
+       
     }
 }
