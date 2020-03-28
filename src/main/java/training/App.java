@@ -15,13 +15,7 @@ public class App {
 
     public static void main(String[] args) throws InterruptedException {
        
-        TableCreator tc =new TableCreator();
-
-        String accessId = System.getenv("AWS_ACCESS_KEY_ID");
-        String accessSecret= System.getenv("AWS_SECRET_ACCESS_KEY");
-Create item=new Create();
-        tc.createTable(accessId,accessSecret);
-        item.createTable();
+      
         System.out.println(new App().getGreeting());
 
         System.out.println(new Area().getAreaforAllShapes());
