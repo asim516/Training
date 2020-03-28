@@ -6,7 +6,7 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
 import java.util.Objects;
 import java.util.Set;
 
-@DynamoDBTable(tableName = "igh")
+@DynamoDBTable(tableName = "IGHItems")
 public class CreateItems   {
 
     private  Integer ghid=0 ;
