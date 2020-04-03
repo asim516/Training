@@ -13,12 +13,11 @@ public class App {
 
     public static void main(String[] args) throws InterruptedException {
        
-        TableCreator tc =new TableCreator();
 
         String accessId = System.getenv("AWS_ACCESS_KEY_ID");
         String accessSecret= System.getenv("AWS_SECRET_ACCESS_KEY");
 InsertItems item=new InsertItems();
-        tc.createTable(accessId,accessSecret);
+    
       item.putItem();
         System.out.println(new App().getGreeting());
 
