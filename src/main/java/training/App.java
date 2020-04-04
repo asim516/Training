@@ -14,10 +14,7 @@ public class App {
     public static void main(String[] args) throws InterruptedException {
        
 
-
-        String accessId = System.getenv("AWS_ACCESS_KEY_ID");
-        String accessSecret= System.getenv("AWS_SECRET_ACCESS_KEY");
-TableItems item=new TableItems();
+Items item=new Items();
 
       item.putItem();
         System.out.println(new App().getGreeting());
