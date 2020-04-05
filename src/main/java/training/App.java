@@ -14,7 +14,7 @@ public class App {
     public static void main(String[] args) throws InterruptedException {
        
 
-Items item=new Items();
+ItemsCreator item=new ItemsCreator();
 
       item.putItem();
         System.out.println(new App().getGreeting());
