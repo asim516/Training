@@ -9,7 +9,7 @@ import com.amazonaws.services.dynamodbv2.document.PutItemOutcome;
 import com.amazonaws.services.dynamodbv2.document.Table;
 
 public class ItemsCreator {
-    public void putItem() {
+    public Boolean putItem() {
 
         AmazonDynamoDB client = AmazonDynamoDBClientBuilder.standard().build();
         DynamoDB dynamoDB = new DynamoDB(client);
@@ -23,6 +23,17 @@ public class ItemsCreator {
                 .withBoolean("discontinued", false);
 
         table.putItem(item);
-        System.out.println(item.getNumber("shelflife") + "," + item.getString("Title") + ", " + item.getBoolean("discontinued"));
+
+        PutItemOutcome outcome = table.putItem(item);
+
+        if(outcome !=null)
+
+        { System.out.println("Items inserted");
+        return true;
+
     }
-}
+        else{
+            System.out.println("Items not inserted");
+            return false;
+        }
+}}
